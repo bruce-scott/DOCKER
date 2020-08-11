@@ -1,0 +1,8 @@
+sudo ls -al  /var/lib/docker/volumes/cw-test-volume/_data && sudo cat /var/lib/docker/volumes/cw-test-volume/_data/i-will-persist.txt
+
+docker run -it --name second-volume-container -v cw-test-volume:/secondmountpoint alpine ash
+
+ls -l /secondmountpoint && cat /secondmountpoint/i-will-persist.txt
+
+https://github.com/clarusway/clarusway-aws-devops-1-20/tree/master/devops/hands-on/docker-03-handling-volumes
+
